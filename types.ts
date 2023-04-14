@@ -7,5 +7,7 @@ export interface ClientSettings {
 
 export interface RequestSettings {
     method: RequestMethods,
-    useBase: boolean,
+    useBase?: boolean,
+    headers?: HeadersInit,
+    body?: BodyInit,
 }
