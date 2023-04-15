@@ -1,6 +1,6 @@
 import * as types from './types.ts';
 
-export default class BFC {
+export class BetterFetchClient {
     public settings: types.ClientSettings;
     constructor(settings: types.ClientSettings) {
         if (!settings.headers) settings.headers = {};
