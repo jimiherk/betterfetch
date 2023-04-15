@@ -10,4 +10,5 @@ export interface RequestSettings {
     useBase?: boolean,
     headers?: HeadersInit,
     body?: BodyInit,
+    params: string[][],
 }

@@ -13,7 +13,15 @@ export default class BFC {
             url = this.settings.base + url;
         }
 
+        url = new URL(url);
+
         if (!settings.headers) settings.headers = {};
+
+        if (settings.params.length > 0) {
+            for (let parameter of settings.params) {
+                url.searchParams.append(parameter[0], parameter[1]);
+            }
+        }
 
         return fetch(url, {
             method: settings.method,
